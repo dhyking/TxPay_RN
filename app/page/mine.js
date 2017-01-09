@@ -10,7 +10,6 @@ import {
     TouchableOpacity,
     WebView,
 } from 'react-native';
-
 export default class MyselfPage extends Component {
     constructor(props) {
         super(props);
@@ -21,10 +20,7 @@ export default class MyselfPage extends Component {
     render() {
         return (
             <View style={styles.container}>
-                <TouchableOpacity style={styles.submit_container} >
-                    <Image style={{width:200,height:30,borderRadius:20}}
-                           source={require('../img/login/login_icon_register.png')}/>
-                </TouchableOpacity>
+               <Text>this is mine page</Text>
             </View>
         )
     }

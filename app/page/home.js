@@ -33,7 +33,7 @@ export default class HomePage extends Component {
         return (
             <View style={styles.container}>
                 <TabNavigator
-                    tabBarStyle={{backgroundColor:'#3b3738'}}
+                    tabBarStyle={{borderColor:'#12030F',borderTopWidth:0.2}}
                 >
                     <TabNavigator.Item
                         selected={this.state.selectedTab === 'collection'}
