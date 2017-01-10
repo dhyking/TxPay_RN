@@ -73,14 +73,15 @@ const styles = StyleSheet.create({
         height: ScreenHeight,
     },
     bottom_container: {
-        flex: 1,
-        flexDirection: 'row'
-
+        flexDirection: 'row',
+        flex:1,
     },
     number_container: {
         flex: 1,
     },
     img_number: {
         flex: 1,
+        width:30,
+        height:30,
     }
 })
