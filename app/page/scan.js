@@ -10,11 +10,24 @@ import {
     TouchableOpacity,
     Dimensions,
     TextInput,
+    TouchableWithoutFeedback
 
 } from 'react-native';
 var ScreenWidth = Dimensions.get('window').width;
 var ScreenHeight = Dimensions.get('window').height;
 export default class ScanInput extends Component {
+    constructor(props) {
+        super(props);
+        this.state={
+            submitPress:false
+        };
+    }
+    submit() {
+        this.setState({
+            submitPress:true
+        })
+    }
+
     render() {
         return (
             <View style={styles.container}>
@@ -30,86 +43,107 @@ export default class ScanInput extends Component {
                             <Text style={{fontSize:20}} numberOfLines={1}>￥</Text>
                         </View>
                     </View>
-                    <View style={{flex: 1}}>
+                    <View style={{flex:1}}>
                         <View style={styles.bottom_container}>
                             <View style={styles.number_container}>
-                                <TouchableOpacity style={{flex:1,alignItems:'center',justifyContent:'center'}}
-                                                 >
+                                <TouchableOpacity activeOpacity={0.6}
+                                                  style={styles.img_container}
+                                >
                                     <Image style={styles.img_number}
-                                           source={ require('../img/collection/home_icon_weixin.png')}/>
+                                           source={require('../img/scan/scan_one_normal.png')}/>
                                 </TouchableOpacity>
-                                <TouchableOpacity style={{flex:1,alignItems:'center',justifyContent:'center'}}
-                                                  >
+                                <TouchableOpacity activeOpacity={0.6}
+                                                  style={styles.img_container}
+                                >
                                     <Image style={styles.img_number}
-                                           source={ require('../img/collection/home_icon_zhifubao.png')}/>
+                                           source={require('../img/scan/scan_four_normal.png')}/>
                                 </TouchableOpacity>
-                                <TouchableOpacity style={{flex:1,alignItems:'center',justifyContent:'center'}}
-                                                  >
+                                <TouchableOpacity activeOpacity={0.6}
+                                                  style={styles.img_container}
+                                >
                                     <Image style={styles.img_number}
-                                           source={ require('../img/collection/home_icon_zhifubao.png')}/>
+                                           source={require('../img/scan/scan_seven_normal.png')}/>
+                                </TouchableOpacity>
+                                <TouchableOpacity activeOpacity={0.6}
+                                                  style={styles.img_container}
+                                >
+                                    <Image style={styles.img_number}
+                                           source={require('../img/scan/scan_point_normal.png')}/>
+                                </TouchableOpacity>
+
+                                <TouchableOpacity activeOpacity={0.6}
+                                                  style={styles.img_container}
+                                >
+                                    <Image style={styles.img_number}
+                                           source={require('../img/scan/scan_icon_xiala.png')}/>
+                                </TouchableOpacity>
+
+                            </View>
+                            <View style={styles.number_container}>
+                                <TouchableOpacity activeOpacity={0.6}
+                                                  style={styles.img_container}
+                                >
+                                    <Image style={styles.img_number}
+                                           source={require('../img/scan/scan_two_normal.png')}/>
+                                </TouchableOpacity>
+                                <TouchableOpacity activeOpacity={0.6}
+                                                  style={styles.img_container}
+                                >
+                                    <Image style={styles.img_number}
+                                           source={require('../img/scan/scan_five_normal.png')}/>
+                                </TouchableOpacity>
+                                <TouchableOpacity activeOpacity={0.6}
+                                                  style={styles.img_container}
+                                >
+                                    <Image style={styles.img_number}
+                                           source={require('../img/scan/scan_eight_normal.png')}/>
+                                </TouchableOpacity>
+                                <TouchableOpacity activeOpacity={0.6}
+                                                  style={styles.img_container}
+                                >
+                                    <Image style={styles.img_number}
+                                           source={require('../img/scan/scan_zero_normal.png')}/>
+                                </TouchableOpacity>
+                                <TouchableOpacity
+                                    onPress={this.submit.bind(this)}
+                                                  style={[styles.img_container]}
+                                >
+                                    <Image style={[styles.img_number,styles.img_scan]} source={
+                                       require('../img/scan/scan_icon_bt.png')}/>
                                 </TouchableOpacity>
                             </View>
                             <View style={styles.number_container}>
-                                <TouchableOpacity style={{flex:1,alignItems:'center',justifyContent:'center'}}
-                                               >
+                                <TouchableOpacity activeOpacity={0.6}
+                                                  style={styles.img_container}
+                                >
                                     <Image style={styles.img_number}
-                                           source={ require('../img/collection/home_icon_weixin.png')}/>
+                                           source={require('../img/scan/scan_three_normal.png')}/>
                                 </TouchableOpacity>
-                                <TouchableOpacity style={{flex:1,alignItems:'center',justifyContent:'center'}}
-                                                 >
+                                <TouchableOpacity activeOpacity={0.6}
+                                                  style={styles.img_container}
+                                >
                                     <Image style={styles.img_number}
-                                           source={ require('../img/collection/home_icon_zhifubao.png')}/>
+                                           source={require('../img/scan/scan_six_normal.png')}/>
                                 </TouchableOpacity>
-                                <TouchableOpacity style={{flex:1,alignItems:'center',justifyContent:'center'}}
-                                                  >
+                                <TouchableOpacity activeOpacity={0.6}
+                                                  style={styles.img_container}
+                                >
                                     <Image style={styles.img_number}
-                                           source={ require('../img/collection/home_icon_zhifubao.png')}/>
+                                           source={require('../img/scan/scan_nine_normal.png')}/>
                                 </TouchableOpacity>
-                            </View>
-                            <View style={styles.number_container}>
-                                <TouchableOpacity style={{flex:1,alignItems:'center',justifyContent:'center'}}
-                                                 >
+                                <TouchableOpacity activeOpacity={0.6}
+                                                  style={styles.img_container}
+                                >
                                     <Image style={styles.img_number}
-                                           source={ require('../img/collection/home_icon_weixin.png')}/>
+                                           source={require('../img/scan/scan_delete_normal.png')}/>
                                 </TouchableOpacity>
-                                <TouchableOpacity style={{flex:1,alignItems:'center',justifyContent:'center'}}
-                                                  >
+                                <TouchableOpacity activeOpacity={0.6}
+                                                  style={styles.img_container}
+                                >
                                     <Image style={styles.img_number}
-                                           source={ require('../img/collection/home_icon_zhifubao.png')}/>
-                                </TouchableOpacity>
-                                <TouchableOpacity style={{flex:1,alignItems:'center',justifyContent:'center'}}
-                                                  >
-                                    <Image style={styles.img_number}
-                                           source={ require('../img/collection/home_icon_zhifubao.png')}/>
+                                           source={require('../img/scan/scan_icon_chongzhi.png')}/>
                                 </TouchableOpacity>
                             </View>
-                            {/*<View style={styles.number_container}>
-                             <Image style={styles.img_number} source={require('../img/scan/scan_one_normal.png')}/>
-                             <Image style={styles.img_number} source={require('../img/scan/scan_four_normal.png')}/>
-                             <Image style={styles.img_number} source={require('../img/scan/scan_seven_normal.png')}/>
-                             </View>
-                             <View style={styles.number_container}>
-                             <Image style={styles.img_number} source={require('../img/scan/scan_two_normal.png')}/>
-                             <Image style={styles.img_number} source={require('../img/scan/scan_five_normal.png')}/>
-                             <Image style={styles.img_number} source={require('../img/scan/scan_eight_normal.png')}/>
-                             </View>
-                             <View style={styles.number_container}>
-                             <Image style={styles.img_number} source={require('../img/scan/scan_three_normal.png')}/>
-                             <Image style={styles.img_number} source={require('../img/scan/scan_six_normal.png')}/>
-                             <Image style={styles.img_number} source={require('../img/scan/scan_nine_normal.png')}/>
-                             </View>
-                             <View style={styles.number_container}>
-                             <Image style={styles.img_number} source={require('../img/scan/scan_point_normal.png')}/>
-                             <Image style={styles.img_number} source={require('../img/scan/scan_icon_xiala.png')}/>
-                             <Image style={styles.img_number} source={require('../img/scan/scan_zero_normal.png')}/>
-                             </View>
-                             <View style={styles.number_container}>
-                             <Image style={styles.img_number} source={require('../img/scan/scan_icon_bt.png')}/>
-                             <Image style={styles.img_number}
-                             source={require('../img/scan/scan_delete_normal.png')}/>
-                             <Image style={styles.img_number}
-                             source={require('../img/scan/scan_icon_chongzhi.png')}/>
-                             </View>*/}
                         </View>
                     </View>
                 </View>
@@ -121,8 +155,6 @@ export default class ScanInput extends Component {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        justifyContent: 'center',
-        alignItems: 'center'
     },
     bg: {
         resizeMode: 'cover',
@@ -131,13 +163,27 @@ const styles = StyleSheet.create({
     },
     bottom_container: {
         flex: 1,
+        justifyContent: 'center',
+        alignItems: 'center',
+        padding: 5,
+        flexDirection: 'row',
     },
     number_container: {
         flex: 1,
-        flexDirection: 'row'
-
+        justifyContent: 'center',
+        alignItems: 'center',
+    },
+    img_container: {
+        flex: 1,
+        justifyContent: 'center',
+        alignItems: 'center',
     },
     img_number: {
-        resizeMode: 'cover'
-    }
+        resizeMode: 'center',
+    },
+    img_scan:{
+        borderRadius:15,
+        borderWidth:1,
+        borderColor:'#ffffff'
+    },
 })
