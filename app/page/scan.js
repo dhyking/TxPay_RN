@@ -30,29 +30,86 @@ export default class ScanInput extends Component {
                             <Text style={{fontSize:20}} numberOfLines={1}>￥</Text>
                         </View>
                     </View>
-                    <View style={{flex: 1}} >
+                    <View style={{flex: 1}}>
                         <View style={styles.bottom_container}>
                             <View style={styles.number_container}>
-                                <Image style={styles.img_number} source={require('../img/scan/scan_one_normal.png')}/>
-                                <Image style={styles.img_number} source={require('../img/scan/scan_four_normal.png')}/>
-                                <Image style={styles.img_number} source={require('../img/scan/scan_seven_normal.png')}/>
-                                <Image style={styles.img_number} source={require('../img/scan/scan_point_normal.png')}/>
-                                <Image style={styles.img_number} source={require('../img/scan/scan_icon_xiala.png')}/>
+                                <TouchableOpacity style={{flex:1,alignItems:'center',justifyContent:'center'}}
+                                                 >
+                                    <Image style={styles.img_number}
+                                           source={ require('../img/collection/home_icon_weixin.png')}/>
+                                </TouchableOpacity>
+                                <TouchableOpacity style={{flex:1,alignItems:'center',justifyContent:'center'}}
+                                                  >
+                                    <Image style={styles.img_number}
+                                           source={ require('../img/collection/home_icon_zhifubao.png')}/>
+                                </TouchableOpacity>
+                                <TouchableOpacity style={{flex:1,alignItems:'center',justifyContent:'center'}}
+                                                  >
+                                    <Image style={styles.img_number}
+                                           source={ require('../img/collection/home_icon_zhifubao.png')}/>
+                                </TouchableOpacity>
                             </View>
                             <View style={styles.number_container}>
-                                <Image style={styles.img_number} source={require('../img/scan/scan_two_normal.png')}/>
-                                <Image style={styles.img_number} source={require('../img/scan/scan_five_normal.png')}/>
-                                <Image style={styles.img_number} source={require('../img/scan/scan_eight_normal.png')}/>
-                                <Image style={styles.img_number} source={require('../img/scan/scan_icon_bt.png')}/>
-                                <Image style={styles.img_number} source={require('../img/scan/scan_zero_normal.png')}/>
+                                <TouchableOpacity style={{flex:1,alignItems:'center',justifyContent:'center'}}
+                                               >
+                                    <Image style={styles.img_number}
+                                           source={ require('../img/collection/home_icon_weixin.png')}/>
+                                </TouchableOpacity>
+                                <TouchableOpacity style={{flex:1,alignItems:'center',justifyContent:'center'}}
+                                                 >
+                                    <Image style={styles.img_number}
+                                           source={ require('../img/collection/home_icon_zhifubao.png')}/>
+                                </TouchableOpacity>
+                                <TouchableOpacity style={{flex:1,alignItems:'center',justifyContent:'center'}}
+                                                  >
+                                    <Image style={styles.img_number}
+                                           source={ require('../img/collection/home_icon_zhifubao.png')}/>
+                                </TouchableOpacity>
                             </View>
                             <View style={styles.number_container}>
-                                <Image style={styles.img_number} source={require('../img/scan/scan_three_normal.png')}/>
-                                <Image style={styles.img_number} source={require('../img/scan/scan_six_normal.png')}/>
-                                <Image style={styles.img_number} source={require('../img/scan/scan_nine_normal.png')}/>
-                                <Image style={styles.img_number} source={require('../img/scan/scan_delete_normal.png')}/>
-                                <Image style={styles.img_number} source={require('../img/scan/scan_icon_chongzhi.png')}/>
+                                <TouchableOpacity style={{flex:1,alignItems:'center',justifyContent:'center'}}
+                                                 >
+                                    <Image style={styles.img_number}
+                                           source={ require('../img/collection/home_icon_weixin.png')}/>
+                                </TouchableOpacity>
+                                <TouchableOpacity style={{flex:1,alignItems:'center',justifyContent:'center'}}
+                                                  >
+                                    <Image style={styles.img_number}
+                                           source={ require('../img/collection/home_icon_zhifubao.png')}/>
+                                </TouchableOpacity>
+                                <TouchableOpacity style={{flex:1,alignItems:'center',justifyContent:'center'}}
+                                                  >
+                                    <Image style={styles.img_number}
+                                           source={ require('../img/collection/home_icon_zhifubao.png')}/>
+                                </TouchableOpacity>
                             </View>
+                            {/*<View style={styles.number_container}>
+                             <Image style={styles.img_number} source={require('../img/scan/scan_one_normal.png')}/>
+                             <Image style={styles.img_number} source={require('../img/scan/scan_four_normal.png')}/>
+                             <Image style={styles.img_number} source={require('../img/scan/scan_seven_normal.png')}/>
+                             </View>
+                             <View style={styles.number_container}>
+                             <Image style={styles.img_number} source={require('../img/scan/scan_two_normal.png')}/>
+                             <Image style={styles.img_number} source={require('../img/scan/scan_five_normal.png')}/>
+                             <Image style={styles.img_number} source={require('../img/scan/scan_eight_normal.png')}/>
+                             </View>
+                             <View style={styles.number_container}>
+                             <Image style={styles.img_number} source={require('../img/scan/scan_three_normal.png')}/>
+                             <Image style={styles.img_number} source={require('../img/scan/scan_six_normal.png')}/>
+                             <Image style={styles.img_number} source={require('../img/scan/scan_nine_normal.png')}/>
+                             </View>
+                             <View style={styles.number_container}>
+                             <Image style={styles.img_number} source={require('../img/scan/scan_point_normal.png')}/>
+                             <Image style={styles.img_number} source={require('../img/scan/scan_icon_xiala.png')}/>
+                             <Image style={styles.img_number} source={require('../img/scan/scan_zero_normal.png')}/>
+                             </View>
+                             <View style={styles.number_container}>
+                             <Image style={styles.img_number} source={require('../img/scan/scan_icon_bt.png')}/>
+                             <Image style={styles.img_number}
+                             source={require('../img/scan/scan_delete_normal.png')}/>
+                             <Image style={styles.img_number}
+                             source={require('../img/scan/scan_icon_chongzhi.png')}/>
+                             </View>*/}
                         </View>
                     </View>
                 </View>
@@ -73,15 +130,14 @@ const styles = StyleSheet.create({
         height: ScreenHeight,
     },
     bottom_container: {
-        flexDirection: 'row',
-        flex:1,
+        flex: 1,
     },
     number_container: {
         flex: 1,
+        flexDirection: 'row'
+
     },
     img_number: {
-        flex: 1,
-        width:30,
-        height:30,
+        resizeMode: 'cover'
     }
 })
